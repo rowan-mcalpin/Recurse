@@ -8,59 +8,85 @@ public class GUI extends JFrame implements ActionListener {
     JFrame f;
 
     GUI() {
-        f = new JFrame("Recursive Text Editor V0.0.1");
-
+        // Create a frame
+        f = new JFrame("editor");
+ 
         try {
+            // Set metal look and feel
             UIManager.setLookAndFeel("javax.swing.plaf.metal.MetalLookAndFeel");
-
+ 
+            // Set theme to ocean
             MetalLookAndFeel.setCurrentTheme(new OceanTheme());
         }
         catch (Exception e) {
-            // TODO: Restart Program if UI setup doesn't work?
+            // TODO: Handle UI loading problems
         }
-
+ 
+        // Text component
         t = new JTextArea();
-
+ 
+        // Create a menubar
         JMenuBar mb = new JMenuBar();
-
+ 
+        // Create amenu for menu
         JMenu m1 = new JMenu("File");
-
+ 
+        // Create menu items
         JMenuItem mi1 = new JMenuItem("New");
         JMenuItem mi2 = new JMenuItem("Open");
         JMenuItem mi3 = new JMenuItem("Save");
-        JMenuItem mi9 = new JMenuItem("Print");
-
+        JMenuItem mi4 = new JMenuItem("Print");
+ 
+        // Add action listener
         mi1.addActionListener(this);
         mi2.addActionListener(this);
         mi3.addActionListener(this);
-        mi9.addActionListener(this);
-
-        JMenu m2 = new JMenu("Edit");
-
-        JMenuItem mi4 = new JMenuItem("Cut");
-        JMenuItem mi5 = new JMenuItem("Copy");
-        JMenuItem mi6 = new JMenuItem("Paste");
-
         mi4.addActionListener(this);
+ 
+        m1.add(mi1);
+        m1.add(mi2);
+        m1.add(mi3);
+        m1.add(mi4);
+ 
+        // Create amenu for menu
+        JMenu m2 = new JMenu("Edit");
+ 
+        // Create menu items
+        JMenuItem mi5 = new JMenuItem("cut");
+        JMenuItem mi6 = new JMenuItem("copy");
+        JMenuItem mi7 = new JMenuItem("paste");
+ 
+        // Add action listener
         mi5.addActionListener(this);
         mi6.addActionListener(this);
-
-        m2.add(mi4);
+        mi7.addActionListener(this);
+ 
         m2.add(mi5);
         m2.add(mi6);
-
-        JMenuItem mc = new JMenuItem("Close");
-
+        m2.add(mi7);
+ 
+        JMenuItem mc = new JMenuItem("close");
+ 
         mc.addActionListener(this);
-
+ 
         mb.add(m1);
         mb.add(m2);
         mb.add(mc);
-
+ 
         f.setJMenuBar(mb);
         f.add(t);
         f.setSize(500, 500);
         f.setVisible(true);
+        f.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
+        f.addWindowListener(new WindowAdapter() {
+            public void WindowClosing(WindowEvent we) {
+                String ObjButtons[] = {"Yes", "No"};
+                int promptResult = JOptionPane.showOptionDialog(f, "Are you sure you want to exit?", "Exit Confirmation", JOptionPane.DEFAULT_OPTION, JOptionPane.WARNING_MESSAGE, null, ObjButtons, ObjButtons[1]);
+                if (promptResult == JOptionPane.YES_OPTION) {
+                    System.exit(0);
+                }
+            }
+        });
     }
 
     public void actionPerformed(ActionEvent e) {
@@ -93,7 +119,11 @@ public class GUI extends JFrame implements ActionListener {
             t.setText("");
         }
         else if (s.equals("Close")) {
-            f.setVisible(false);
+            String ObjButtons[] = {"Yes", "No"};
+            int promptResult = JOptionPane.showOptionDialog(f, "Are you sure you want to exit?", "Exit Confirmation", JOptionPane.DEFAULT_OPTION, JOptionPane.WARNING_MESSAGE, null, ObjButtons, ObjButtons[1]);
+            if (promptResult == JOptionPane.YES_OPTION) {
+                System.exit(0);
+            }
         }
     }
 
