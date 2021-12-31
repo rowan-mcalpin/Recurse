@@ -10,3 +10,5 @@ V0.0.1 (Current Version):
         - Save and Open functionality need to be developed
         - Handle problems with loading the UI
         - General Testing
+        - Add Scrollbars for overflow
+        - Center close confirmation and file select on window
