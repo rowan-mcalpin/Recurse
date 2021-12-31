@@ -3,10 +3,12 @@ A Lightweight Text Editor
 
 ## Changelog
 V0.0.1 (Current Version):
-    - COMPLETED:
+
+    COMPLETED:
         - Introduce UI
         - New, Print, Cut, Copy, and Paste have been introduced but remain untested
-    - TODO:
+        - Close confirmation
+    TODO:
         - Save and Open functionality need to be developed
         - Handle problems with loading the UI
         - General Testing
