@@ -1,5 +1,5 @@
 # Recursive-Text-Editor
-A Lightweight Text Editor
+A very lightweight text editor (GOAL: Under 8KB, REALISTIC GOAL: Under 1MB)
 
 ## Changelog
 V0.0.1 (Current Version):
