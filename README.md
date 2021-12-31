@@ -2,7 +2,7 @@
 A very lightweight text editor (GOAL: Under 8KB, REALISTIC GOAL: Under 1MB)
 
 ## Changelog
-V0.0.1 (Current Version):
+V0.0.1-Alpha (Current Version):
 
     COMPLETED:
         - Introduce UI
