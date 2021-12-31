@@ -52,9 +52,9 @@ public class GUI extends JFrame implements ActionListener {
         JMenu m2 = new JMenu("Edit");
  
         // Create menu items
-        JMenuItem mi5 = new JMenuItem("cut");
-        JMenuItem mi6 = new JMenuItem("copy");
-        JMenuItem mi7 = new JMenuItem("paste");
+        JMenuItem mi5 = new JMenuItem("Cut");
+        JMenuItem mi6 = new JMenuItem("Copy");
+        JMenuItem mi7 = new JMenuItem("Paste");
  
         // Add action listener
         mi5.addActionListener(this);
@@ -65,7 +65,7 @@ public class GUI extends JFrame implements ActionListener {
         m2.add(mi6);
         m2.add(mi7);
  
-        JMenuItem mc = new JMenuItem("close");
+        JMenuItem mc = new JMenuItem("Close");
  
         mc.addActionListener(this);
  
@@ -73,20 +73,21 @@ public class GUI extends JFrame implements ActionListener {
         mb.add(m2);
         mb.add(mc);
  
-        f.setJMenuBar(mb);
-        f.add(t);
-        f.setSize(500, 500);
-        f.setVisible(true);
-        f.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
-        f.addWindowListener(new WindowAdapter() {
-            public void WindowClosing(WindowEvent we) {
-                String ObjButtons[] = {"Yes", "No"};
-                int promptResult = JOptionPane.showOptionDialog(f, "Are you sure you want to exit?", "Exit Confirmation", JOptionPane.DEFAULT_OPTION, JOptionPane.WARNING_MESSAGE, null, ObjButtons, ObjButtons[1]);
-                if (promptResult == JOptionPane.YES_OPTION) {
-                    System.exit(0);
-                }
-            }
-        });
+        setJMenuBar(mb);
+        add(t);
+        setSize(500, 500);
+        
+    	setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
+        addWindowListener(new java.awt.event.WindowAdapter() {
+			public void windowClosing(java.awt.event.WindowEvent evt) {
+				String ObjButtons[] = {"Yes", "No"};
+            	int promptResult = JOptionPane.showOptionDialog(f, "Are you sure you want to exit?", "Exit Confirmation", JOptionPane.DEFAULT_OPTION, JOptionPane.WARNING_MESSAGE, null, ObjButtons, ObjButtons[1]);
+            	if (promptResult == JOptionPane.YES_OPTION) {
+                	System.exit(0);
+            	}
+			}
+		});
+		setVisible(true);
     }
 
     public void actionPerformed(ActionEvent e) {
