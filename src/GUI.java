@@ -85,7 +85,7 @@ public class GUI extends JFrame implements ActionListener {
         f.setJMenuBar(mb);
         f.getContentPane().add(sp);
         f.setSize(1000, 1000);
-        f.setTitle("Recursion - A lightweight text editor | Untitled Document");
+        f.setTitle("Recursion 0.0.1 - A lightweight text editor | Untitled Document");
 
     	f.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
         f.addWindowListener(new java.awt.event.WindowAdapter() {
