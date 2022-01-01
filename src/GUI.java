@@ -85,7 +85,7 @@ public class GUI extends JFrame implements ActionListener {
         f.setJMenuBar(mb);
         f.getContentPane().add(sp);
         f.setSize(1000, 1000);
-        f.setTitle("Recursion 0.0.1 - A lightweight text editor | Untitled Document");
+        f.setTitle("Recursion 0.1.0 - A lightweight text editor | Untitled Document");
 
     	f.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
         f.addWindowListener(new java.awt.event.WindowAdapter() {
@@ -128,7 +128,7 @@ public class GUI extends JFrame implements ActionListener {
 
                     w.flush();
                     w.close();
-                    f.setTitle("Recursion - A lightweight text editor | "+j.getSelectedFile());
+                    f.setTitle("Recursion 0.1.0 - A lightweight text editor | "+j.getSelectedFile());
                 }
                 catch (Exception evt) {
                     JOptionPane.showMessageDialog(f, evt.getMessage(), "Error Saving File", JOptionPane.ERROR_MESSAGE);
@@ -165,7 +165,7 @@ public class GUI extends JFrame implements ActionListener {
 
                     t.setText(sl);
                     br.close();
-                    f.setTitle("Recursion - A lightweight text editor | "+j.getSelectedFile());
+                    f.setTitle("Recursion 0.1.0 - A lightweight text editor | "+j.getSelectedFile());
                 }
                 catch (Exception evt) {
                     JOptionPane.showMessageDialog(f, evt.getMessage(), "Error Reading File", JOptionPane.ERROR_MESSAGE);
@@ -175,7 +175,7 @@ public class GUI extends JFrame implements ActionListener {
         else if (s.equals("New")) {
             t.setText("");
             
-            f.setTitle("Recursion - A lightweight text editor | Untitled Document");
+            f.setTitle("Recursion 0.1.0 - A lightweight text editor | Untitled Document");
         }
         else if (s.equals("Close")) {
             String ObjButtons[] = {"Yes", "No"};
