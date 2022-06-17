@@ -15,7 +15,7 @@ An ultra-lightweight and simplistic text editor
         - Add Scrollbars for overflow
         - Center close confirmation and file select on window
 
-### v0.1.0 (Current Version):
+### v0.1.0:
 This is the first full release of the software!
 
     COMPLETED:
