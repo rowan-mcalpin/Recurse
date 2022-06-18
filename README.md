@@ -1,12 +1,13 @@
-![GitHub release (latest SemVer including pre-releases)](https://img.shields.io/github/v/release/REM-Codes/Recurse?include_prereleases&style=for-the-badge)
-![GitHub repo size](https://img.shields.io/github/repo-size/REM-Codes/Recurse?style=for-the-badge)
-![GitHub](https://img.shields.io/github/license/REM-Codes/Recurse)
+![GitHub release (latest SemVer including pre-releases)](https://img.shields.io/github/v/release/REM-Codes/Recurse?include_prereleases&label=latest%20release&style=flat-square)
+![GitHub repo size](https://img.shields.io/github/repo-size/REM-Codes/Recurse?style=flat-square)
+![GitHub](https://img.shields.io/github/license/REM-Codes/Recurse?style=flat-square)
 
 # Recurse
 An ultra-lightweight and simplistic text editor
 
 ## Changelog
-### v0.0.1-Alpha:
+### v0.0.1-alpha:
+Initial release
 
     COMPLETED:
         - Introduce UI
@@ -18,6 +19,7 @@ An ultra-lightweight and simplistic text editor
         - General Testing
         - Add Scrollbars for overflow
         - Center close confirmation and file select on window
+        - Create executable
 
 ### v0.1.0:
 This is the first full release of the software!
