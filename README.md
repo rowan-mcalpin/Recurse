@@ -1,6 +1,6 @@
-[![Latest Version(latest version)](https://img.shields.io/github/v/release/REM-Codes/Recurse?include_prereleases&label=latest%20release&style=flat-square)](https://github.com/REM-Codes/Recurse/releases)
-[![GitHub repo size](https://img.shields.io/github/repo-size/REM-Codes/Recurse?style=flat-square)](https://github.com/REM-Codes/Recurse)
-[![GitHub](https://img.shields.io/github/license/REM-Codes/Recurse?style=flat-square)](https://github.com/REM-Codes/Recurse/blob/main/LICENSE)
+[![Latest Version(latest version)](https://img.shields.io/github/v/release/REM-Codes/Recurse?include_prereleases&label=latest%20release&style=for-the-badge)](https://github.com/REM-Codes/Recurse/releases)
+[![GitHub repo size](https://img.shields.io/github/repo-size/REM-Codes/Recurse?style=for-the-badge)](https://github.com/REM-Codes/Recurse)
+[![GitHub](https://img.shields.io/github/license/REM-Codes/Recurse?style=for-the-badge)](https://github.com/REM-Codes/Recurse/blob/main/LICENSE)
 
 # **Recurse**
 An ultra-lightweight and simplistic text editor
