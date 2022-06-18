@@ -25,18 +25,21 @@ namespace Recurse
     public partial class Recurse : Form
     {
         private string FileContent = String.Empty;
+        private string prefix = "";
+        private string path = "Untitled";
+
         public Recurse()
         {
             InitializeComponent();
             OpenFileDialog.RestoreDirectory = true;
             SaveFileDialog.RestoreDirectory = true;
-            FileName.Focus();
             KeyPreview = true;
         }
 
         private void TextArea_TextChanged(object sender, EventArgs e)
         {
             FileContent = TextArea.Text;
+            UpdateFileName();
         }
 
         private void Open()
@@ -49,11 +52,40 @@ namespace Recurse
             SaveFileDialog.ShowDialog(this);
         }
 
-        private void UpdateFileName(string path)
+        private void UpdateFileName()
         {
-            Text = "Recurse | " + path;
+            try
+            {
+                if (path == "Untitled")
+                {
+                    if (FileContent == String.Empty)
+                    {
+                        prefix = "";
+                    }
+                    else
+                    {
+                        prefix = "*";
+                    }
+                }
+                else
+                {
+                    if (FileContent == File.ReadAllText(path))
+                    {
+                        prefix = "";
+                    }
+                    else
+                    {
+                        prefix = "*";
+                    }
+                }
+            }
+            catch
+            {
+                prefix = "*";
+            }
+            Text = "Recurse | " + path + prefix;
             string[] name = path.Split(new char[] { '\\', '/' });
-            FileName.Text = name[name.Length-1];
+            FileName.Text = prefix + name[name.Length-1];
         }
 
         private void Recurse_KeyDown(object sender, KeyEventArgs e)
@@ -79,18 +111,22 @@ namespace Recurse
 
             var fileStream = OpenFileDialog.OpenFile();
 
+            path = filePath;
+
             using (StreamReader reader = new StreamReader(fileStream))
             {
                 FileContent = reader.ReadToEnd();
-                UpdateFileName(filePath);
                 TextArea.Text = FileContent;
+                UpdateFileName();
             }
         }
 
         private void SaveFileDialog_FileOk(object sender, System.ComponentModel.CancelEventArgs e)
         {
+            path = SaveFileDialog.FileName;
+
             File.WriteAllText(SaveFileDialog.FileName, FileContent);
-            UpdateFileName(SaveFileDialog.FileName);
+            UpdateFileName();
         }
     }
 }

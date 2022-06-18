@@ -111,7 +111,7 @@ namespace Recurse
             this.Controls.Add(this.TextArea);
             this.MinimumSize = new System.Drawing.Size(450, 300);
             this.Name = "Recurse";
-            this.Text = "Recurse | No file";
+            this.Text = "Recurse | Untitled";
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Recurse_KeyDown);
             this.ResumeLayout(false);
             this.PerformLayout();
