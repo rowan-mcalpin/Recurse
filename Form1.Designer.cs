@@ -67,9 +67,11 @@ namespace Recurse
             this.TextArea.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.TextArea.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
             this.TextArea.Location = new System.Drawing.Point(12, 42);
+            this.TextArea.MaxLength = 999999999;
             this.TextArea.Multiline = true;
             this.TextArea.Name = "TextArea";
             this.TextArea.PlaceholderText = "Start typing to create a file or press Control+O to open one.";
+            this.TextArea.ScrollBars = System.Windows.Forms.ScrollBars.Both;
             this.TextArea.Size = new System.Drawing.Size(776, 396);
             this.TextArea.TabIndex = 0;
             this.TextArea.WordWrap = false;
