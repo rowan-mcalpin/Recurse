@@ -1,6 +1,6 @@
 ![GitHub release (latest SemVer including pre-releases)](https://img.shields.io/github/v/release/REM-Codes/Recurse?include_prereleases&style=for-the-badge)
 ![GitHub repo size](https://img.shields.io/github/repo-size/REM-Codes/Recurse?style=for-the-badge)
-![GitHub](https://img.shields.io/github/license/REM-Codes/Recurse?style=for-the-badge)
+![GitHub](https://img.shields.io/github/license/REM-Codes/Recurse)
 
 # Recurse
 An ultra-lightweight and simplistic text editor
