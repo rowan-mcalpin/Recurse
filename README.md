@@ -2,8 +2,24 @@
 [![GitHub repo size](https://img.shields.io/github/repo-size/REM-Codes/Recurse?style=flat-square)](https://github.com/REM-Codes/Recurse)
 [![GitHub](https://img.shields.io/github/license/REM-Codes/Recurse?style=flat-square)](https://github.com/REM-Codes/Recurse/blob/main/LICENSE.md)
 
-# Recurse
+# **Recurse**
 An ultra-lightweight and simplistic text editor
+
+## Installation
+To install the program, navigate to [https://github.com/REM-Codes/Recurse/releases](https://github.com/REM-Codes/Recurse/releases) and download the latest stable version, according to the instructions in the release.
+
+Your browser or operating system might give you a warning about downloading things off of the web. You can review the source code if you don't trust the software. Once you do so, please press `continue` or whatever similar button you see. 
+
+Once the `.exe` is downloaded, double-click it to run it.
+
+## Usage
+Currently (as of 06-17-2022), the keyboard shortcuts are as follows:
+
+|Key|Function|
+|---|---|
+|`Ctrl`+`S`|Save|
+|`Ctrl`+`O`|Open|
+|`Ctrl`+`Q`|Quit|
 
 ## Changelog
 ### v1.0.0 (Current Version):
