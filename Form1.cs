@@ -26,7 +26,7 @@ namespace Recurse
     {
         private string FileContent = String.Empty;
         private string prefix = "";
-        private string path = "Untitled";
+        private string path = Properties.Settings.Default.LastFile;
 
         public Recurse()
         {
@@ -144,6 +144,23 @@ namespace Recurse
 
             File.WriteAllText(SaveFileDialog.FileName, FileContent);
             UpdateFileName();
+        }
+
+        private void Recurse_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Properties.Settings.Default.LastFile = path;
+            Properties.Settings.Default.Save();
+        }
+
+        private void Recurse_Load(object sender, EventArgs e)
+        {
+            if (path != "Untitled")
+            {
+                StreamReader reader = new StreamReader(path);
+                FileContent = reader.ReadToEnd();
+                TextArea.Text = FileContent;
+                UpdateFileName();
+            }
         }
     }
 }
