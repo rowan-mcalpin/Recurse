@@ -20,9 +20,22 @@ Currently (as of 06-17-2022), the keyboard shortcuts are as follows:
 |`Ctrl`+`S`|Save|
 |`Ctrl`+`O`|Open|
 |`Ctrl`+`Q`|Quit|
+|`Ctrl`+`Shift`+`S`|Save As|
+|`Ctrl`+`H`|Show About Box|
 
 ## Changelog
-### v1.1.0 (Current Version):
+### v1.2.0 (Current Version):
+Additional minor updates
+
+    COMPLETED:
+        - Save functionality no longer asks where to save if the file has already been saved once
+        - Allow user to use `Ctrl`+`Shift`+`S` to save a file under a different name
+        - Added about box with license details, contact information, and credit
+    TODO:
+        - Testing
+        - Print feature (?)
+
+### v1.1.0:
 Small updates
 
     COMPLETED:
