@@ -49,7 +49,15 @@ namespace Recurse
 
         private void Save()
         {
-            SaveFileDialog.ShowDialog(this);
+            if (path != "Untitled")
+            {
+                File.WriteAllText(path, FileContent);
+                UpdateFileName();
+            }
+            else
+            {
+                SaveFileDialog.ShowDialog(this);
+            }
         }
 
         private void UpdateFileName()
@@ -93,7 +101,12 @@ namespace Recurse
             if(e.Control && e.KeyCode == Keys.O)
             {
                 Open();
-            } else if(e.Control && e.KeyCode == Keys.S)
+            }
+            else if (e.Control && e.Shift && e.KeyCode == Keys.S)
+            {
+                SaveFileDialog.ShowDialog(this);
+            }
+            else if(e.Control && e.KeyCode == Keys.S)
             {
                 Save();
             } else if(e.Control && e.KeyCode == Keys.Q)
@@ -102,6 +115,10 @@ namespace Recurse
                 {
                     Environment.Exit(0);
                 }
+            } else if (e.Control && e.KeyCode == Keys.H)
+            {
+                About about = new About();
+                about.ShowDialog();
             }
         }
 

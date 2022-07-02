@@ -50,6 +50,7 @@ namespace Recurse
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Recurse));
             this.TextArea = new System.Windows.Forms.TextBox();
             this.FileName = new System.Windows.Forms.Label();
             this.OpenFileDialog = new System.Windows.Forms.OpenFileDialog();
@@ -111,8 +112,10 @@ namespace Recurse
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.FileName);
             this.Controls.Add(this.TextArea);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(450, 300);
             this.Name = "Recurse";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.WindowsDefaultBounds;
             this.Text = "Recurse | Untitled";
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Recurse_KeyDown);
             this.ResumeLayout(false);
