@@ -22,7 +22,17 @@ Currently (as of 06-17-2022), the keyboard shortcuts are as follows:
 |`Ctrl`+`Q`|Quit|
 
 ## Changelog
-### v1.0.0 (Current Version):
+### v1.1.0 (Current Version):
+Small updates
+
+    COMPLETED:
+        - Add scrollbars
+        - Add indicator to signify if the text has been updated since it was saved last
+    TODO:
+        - Testing
+        - Print feature (?)
+
+### v1.0.0:
 Completely re-written from scratch!
 
     COMPLETED:
