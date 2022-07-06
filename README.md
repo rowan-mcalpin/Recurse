@@ -24,6 +24,17 @@ Currently (as of 06-17-2022), the keyboard shortcuts are as follows:
 |`Ctrl`+`H`|Show About Box|
 
 ## Changelog
+### v1.3.0 (Current Version):
+Ease of use updates
+    
+    COMPLETED:
+        - Add shortcut to close a file (without closing the app)
+        - Add a close confirmation when closing a file or the app
+        - Removed bugs:
+            - [#1](https://github.com/REM-Codes/Recurse/issues/1)
+    TODO:
+        - Testing
+
 ### v1.2.0 (Current Version):
 Additional minor updates
 
