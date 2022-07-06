@@ -24,7 +24,7 @@ namespace Recurse
 {
     public partial class Recurse : Form
     {
-        private string FileContent = String.Empty;
+        private string FileContent = "";
         private string prefix = "";
         private string path = Properties.Settings.Default.LastFile;
 
@@ -117,8 +117,10 @@ namespace Recurse
                 }
             } else if (e.Control && e.KeyCode == Keys.H)
             {
+                TextArea.ReadOnly = true;
                 About about = new About();
                 about.ShowDialog();
+                TextArea.ReadOnly = false;
             }
         }
 
