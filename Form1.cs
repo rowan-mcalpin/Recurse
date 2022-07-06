@@ -24,7 +24,19 @@ namespace Recurse
 {
     public partial class Recurse : Form
     {
-        private string FileContent = "";
+        private string FileContent
+        {
+            get
+            {
+                return _fileContent;
+            }
+            set
+            {
+                _fileContent = value;
+                TextArea.Text = _fileContent;
+            }
+        }
+        private string _fileContent = "";
         private string prefix = "";
         private string path = Properties.Settings.Default.LastFile;
 
@@ -121,6 +133,9 @@ namespace Recurse
                 About about = new About();
                 about.ShowDialog();
                 TextArea.ReadOnly = false;
+            } else if (e.Control && e.Shift && e.KeyCode == Keys.X)
+            {
+                CloseFile();
             }
         }
 
@@ -135,7 +150,6 @@ namespace Recurse
             using (StreamReader reader = new StreamReader(fileStream))
             {
                 FileContent = reader.ReadToEnd();
-                TextArea.Text = FileContent;
                 UpdateFileName();
             }
         }
@@ -160,9 +174,28 @@ namespace Recurse
             {
                 StreamReader reader = new StreamReader(path);
                 FileContent = reader.ReadToEnd();
-                TextArea.Text = FileContent;
                 UpdateFileName();
             }
+        }
+
+        private void CloseFile()
+        {
+            if ((path == "Untitled" && FileContent != "") | (path != "Untitled" && FileContent != File.ReadAllText(path))) 
+            { 
+                if (MessageBox.Show("Are you sure you want to close the file?", "Close file?", MessageBoxButtons.YesNo) == DialogResult.No)
+                {
+                    return;
+                }
+
+                if (MessageBox.Show("Do you want to save before closing?", "Save file?", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                {
+                    Save();
+                }
+            }
+
+            path = "Untitled";
+            UpdateFileName();
+            FileContent = "";
         }
     }
 }
