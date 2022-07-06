@@ -22,6 +22,7 @@ Currently (as of 06-17-2022), the keyboard shortcuts are as follows:
 |`Ctrl`+`Q`|Quit|
 |`Ctrl`+`Shift`+`S`|Save As|
 |`Ctrl`+`H`|Show About Box|
+|`Ctrl`+`Shift`+`X`|Close File|
 
 ## Changelog
 ### v1.3.0 (Current Version):
