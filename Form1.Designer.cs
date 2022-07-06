@@ -117,6 +117,7 @@ namespace Recurse
             this.Name = "Recurse";
             this.StartPosition = System.Windows.Forms.FormStartPosition.WindowsDefaultBounds;
             this.Text = "Recurse | Untitled";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Recurse_FormClosing);
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Recurse_FormClosed);
             this.Load += new System.EventHandler(this.Recurse_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Recurse_KeyDown);

@@ -182,12 +182,14 @@ namespace Recurse
         {
             if ((path == "Untitled" && FileContent != "") | (path != "Untitled" && FileContent != File.ReadAllText(path))) 
             { 
-                if (MessageBox.Show("Are you sure you want to close the file?", "Close file?", MessageBoxButtons.YesNo) == DialogResult.No)
+                DialogResult result = MessageBox.Show("Do you want to save before closing?", "Save before closing?", MessageBoxButtons.YesNoCancel);
+
+                if (result == DialogResult.Cancel)
                 {
                     return;
                 }
 
-                if (MessageBox.Show("Do you want to save before closing?", "Save file?", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                else if (result == DialogResult.Yes)
                 {
                     Save();
                 }
@@ -196,6 +198,23 @@ namespace Recurse
             path = "Untitled";
             UpdateFileName();
             FileContent = "";
+        }
+
+        private void Recurse_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if ((path == "Untitled" && FileContent != "") | (path != "Untitled" && FileContent != File.ReadAllText(path)))
+            {
+                DialogResult result = MessageBox.Show("Do you want to save before closing?", "Save before closing?", MessageBoxButtons.YesNoCancel);
+                if (result == DialogResult.Cancel)
+                {
+                    e.Cancel = true;
+                }
+
+                else if (result == DialogResult.Yes)
+                {
+                    Save();
+                }
+            }
         }
     }
 }
