@@ -5,11 +5,22 @@
 # **Recurse**
 An ultra-lightweight and simplistic text editor
 
+Currently, Recurse is only usable on Windows computers, since the GUI is made with Windows Forms.
+
 ## Installation
-To install the program, navigate to [https://github.com/REM-Codes/Recurse/releases](https://github.com/REM-Codes/Recurse/releases) and download the latest stable version, according to the instructions in the release.
+To install the program, navigate to [https://github.com/REM-Codes/Recurse/releases/latest](https://github.com/REM-Codes/Recurse/releases/latest) and download the appropriate file, depending on your computer architecture (see chart  below).
+
+|Architecture|Executable|
+|---|---|
+|32-bit|`Recurse-x86.exe`|
+|64-bit|`Recurse-x64.exe`|
+
+To download all release architectures, download `Recurse-[version].zip`
 
 Your browser or operating system might give you a warning about downloading things off of the web. You can review the source code if you don't trust the software. Once you do so, please press `continue` or whatever similar button you see. 
 
+### If you downloaded a zip
+Extract the `.zip` file.
 Once the `.exe` is downloaded, double-click it to run it.
 
 ## Usage
