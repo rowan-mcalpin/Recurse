@@ -17,14 +17,17 @@ To install the program, navigate to [https://github.com/REM-Codes/Recurse/releas
 
 To download all release architectures, download `Recurse-[version].zip`
 
-Your browser or operating system might give you a warning about downloading things off of the web. You can review the source code if you don't trust the software. Once you do so, please press `continue` or whatever similar button you see. 
+**Your browser or operating system might give you a warning about downloading things off of the web. You can review the source code if you don't trust the software. Once you do so, please press `continue` or whatever similar button you see.** 
 
 ### If you downloaded a zip
-Extract the `.zip` file.
-Once the `.exe` is downloaded, double-click it to run it.
+Extract the `.zip` file to your desktop or another directory.
+Launch the appropriate release by double clicking the `.exe` file.
+
+### If you downloaded an exe
+Once the `.exe` is downloaded, double click it to launch Recurse.
 
 ## Usage
-Currently (as of 06-17-2022), the keyboard shortcuts are as follows:
+Currently (as of 07-16-2022), the keyboard shortcuts are as follows:
 
 |Key|Function|
 |---|---|
@@ -36,7 +39,10 @@ Currently (as of 06-17-2022), the keyboard shortcuts are as follows:
 |`Ctrl`+`Shift`+`X`|Close File|
 
 ## Changelog
-### v1.3.0 (Current Version):
+### v1.3.1 (Latest Version):
+Minor updates & bug fixes
+
+### v1.3.0:
 Ease of use updates
     
     COMPLETED:
@@ -47,7 +53,7 @@ Ease of use updates
     TODO:
         - Testing
 
-### v1.2.0 (Current Version):
+### v1.2.0:
 Additional minor updates
 
     COMPLETED:
