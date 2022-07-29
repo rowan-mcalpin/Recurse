@@ -95,12 +95,14 @@ namespace Recurse
             // OpenFileDialog
             // 
             this.OpenFileDialog.DefaultExt = "txt";
+            this.OpenFileDialog.SupportMultiDottedExtensions = true;
             this.OpenFileDialog.Title = "Open File | Recurse";
             this.OpenFileDialog.FileOk += new System.ComponentModel.CancelEventHandler(this.OpenFileDialog_FileOk);
             // 
             // SaveFileDialog
             // 
             this.SaveFileDialog.DefaultExt = "txt";
+            this.SaveFileDialog.SupportMultiDottedExtensions = true;
             this.SaveFileDialog.Title = "Save File | Recurse";
             this.SaveFileDialog.FileOk += new System.ComponentModel.CancelEventHandler(this.SaveFileDialog_FileOk);
             // 
