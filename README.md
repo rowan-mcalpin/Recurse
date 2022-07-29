@@ -1,19 +1,34 @@
 [![Latest Version(latest version)](https://img.shields.io/github/v/release/REM-Codes/Recurse?include_prereleases&label=latest%20release&style=for-the-badge)](https://github.com/REM-Codes/Recurse/releases)
 [![GitHub repo size](https://img.shields.io/github/repo-size/REM-Codes/Recurse?style=for-the-badge)](https://github.com/REM-Codes/Recurse)
 [![GitHub](https://img.shields.io/github/license/REM-Codes/Recurse?style=for-the-badge)](https://github.com/REM-Codes/Recurse/blob/main/LICENSE)
+[![GitHub all releases](https://img.shields.io/github/downloads/REM-Codes/Recurse/total?style=for-the-badge)](https://github.com/REM-Codes/Recurse/releases/latest)
 
 # **Recurse**
 An ultra-lightweight and simplistic text editor
 
+Currently, Recurse is only usable on Windows computers, since the GUI is made with Windows Forms.
+
 ## Installation
-To install the program, navigate to [https://github.com/REM-Codes/Recurse/releases](https://github.com/REM-Codes/Recurse/releases) and download the latest stable version, according to the instructions in the release.
+To install the program, navigate to [https://github.com/REM-Codes/Recurse/releases/latest](https://github.com/REM-Codes/Recurse/releases/latest) and download the appropriate file, depending on your computer architecture (see chart  below).
 
-Your browser or operating system might give you a warning about downloading things off of the web. You can review the source code if you don't trust the software. Once you do so, please press `continue` or whatever similar button you see. 
+|Architecture|Executable|
+|---|---|
+|32-bit|`Recurse-x86.exe`|
+|64-bit|`Recurse-x64.exe`|
 
-Once the `.exe` is downloaded, double-click it to run it.
+To download all release architectures, download `Recurse-[version].zip`
+
+**Your browser or operating system might give you a warning about downloading things off of the web. You can review the source code if you don't trust the software. Once you do so, please press `continue` or whatever similar button you see.** 
+
+### If you downloaded a zip
+Extract the `.zip` file to your desktop or another directory.
+Launch the appropriate release by double clicking the `.exe` file.
+
+### If you downloaded an exe
+Once the `.exe` is downloaded, double click it to launch Recurse.
 
 ## Usage
-Currently (as of 06-17-2022), the keyboard shortcuts are as follows:
+Currently (as of 07-16-2022), the keyboard shortcuts are as follows:
 
 |Key|Function|
 |---|---|
@@ -25,7 +40,10 @@ Currently (as of 06-17-2022), the keyboard shortcuts are as follows:
 |`Ctrl`+`Shift`+`X`|Close File|
 
 ## Changelog
-### v1.3.0 (Current Version):
+### v1.3.1 (Latest Version):
+Minor updates & bug fixes
+
+### v1.3.0:
 Ease of use updates
     
     COMPLETED:
@@ -36,7 +54,7 @@ Ease of use updates
     TODO:
         - Testing
 
-### v1.2.0 (Current Version):
+### v1.2.0:
 Additional minor updates
 
     COMPLETED:
